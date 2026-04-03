@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Kart Tasarımı</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cards-container">
+
+    <!-- CARD 1 -->
+    <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="logo">
+
+        <span class="tag">WEB GELİŞTİRME</span>
+        <h2>Modern CSS Teknikleri</h2>
+        <p class="desc">
+            Flexbox, Grid, ve modern CSS özellikleri ile responsive web tasarımını öğrenin.
+        </p>
+
+        <div class="bottom">
+            <span class="price">₺299 <small>/ay</small></span>
+            <button onclick="patlat(event)">Başvur</button>
+        </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" class="logo">
+
+        <span class="tag">FRONTEND</span>
+        <h2>JavaScript ile Dinamik Uygulamalar</h2>
+        <p class="desc">
+            Modern JavaScript, DOM manipülasyonu ve API entegrasyonu ile interaktif web uygulamaları.
+        </p>
+
+        <div class="bottom">
+            <span class="price">₺399 <small>/ay</small></span>
+            <button onclick="patlat(event)">Başvur</button>
+        </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" class="logo">
+
+        <span class="tag">UI / UX</span>
+        <h2>Kullanıcı Deneyimi Tasarımı</h2>
+        <p class="desc">
+            Kullanıcı merkezli tasarım, protipleme ve erişilebilirlik prensipleri.
+        </p>
+
+        <div class="bottom">
+            <span class="price">₺249 <small>/ay</small></span>
+            <button onclick="patlat(event)">Başvur</button>
+            
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+function patlat(e) {
+    // patlama noktası (buton ortası)
+    const rect = e.target.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+
+    // patlama elementi oluştur
+    const exp = document.createElement("div");
+    exp.classList.add("explosion");
+    exp.style.left = x + "px";
+    exp.style.top = y + "px";
+
+    document.body.appendChild(exp);
+
+    // animasyon bitince yönlendir
+    setTimeout(() => {
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    }, 600);
+}
+</script>
+
+</body>
+</html>
